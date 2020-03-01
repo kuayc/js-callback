@@ -104,13 +104,15 @@ contains(names, "Colt", function(result) {
   */
 
 function uniq(arr, cb) {
-  for (i = 0; i < arr.length; i++) {
-    for (j = 0; j < arr.length; j++)
-      if (arr[i] !== arr[j]) {
-        let uniqArr = arr.filter();
-      }
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (newArray.indexOf(arr[i]) === -1) {
+      newArray.push(arr[i]);
+    }
   }
+  cb(newArray);
 }
+
 // Do not edit the code below.
 uniq(names, function(uniqArr) {
   console.log(
